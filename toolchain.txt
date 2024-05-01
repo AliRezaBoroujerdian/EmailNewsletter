@@ -38,3 +38,9 @@ cargo fmt -- --check
 8.
 cargo install cargo-audit
 cargo audit
+We will be running cargo-audit as part of our CI pipeline, on every commit.
+We will also run it on a daily schedule to stay on top of new vulnerabilities for dependencies of projects that
+we might not be actively working on at the moment but are still running in our production environment!
+
+9.
+Add GitHub action
