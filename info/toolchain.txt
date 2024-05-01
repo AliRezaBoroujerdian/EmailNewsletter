@@ -44,3 +44,6 @@ we might not be actively working on at the moment but are still running in our p
 
 9.
 Add GitHub action
+
+10.
+rustup toolchain install nightly --allow-downgrade
