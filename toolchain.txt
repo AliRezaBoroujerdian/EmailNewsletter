@@ -23,3 +23,9 @@ cargo tarpaulin --ignore-tests
 rustup component add clippy
 cargo clippy
 cargo clippy -- -D warnings
+
+You can mute a warning using the #[allow(clippy::lint_name)] attribute on the affected code block or
+disable the noisy lint altogether for the whole project with a configuration line in clippy.toml or a projectlevel
+#![allow(clippy::lint_name)] directive.
+Details on the available lints and how to tune them for your specific purposes can be found in clippy’s
+README.
