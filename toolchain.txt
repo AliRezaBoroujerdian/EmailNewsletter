@@ -34,3 +34,7 @@ README.
 rustup component add rustfmt
 cargo fmt
 cargo fmt -- --check
+
+8.
+cargo install cargo-audit
+cargo audit
