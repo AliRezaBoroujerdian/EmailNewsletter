@@ -18,3 +18,8 @@ cargo watch -x check -x test -x run
 5.
 cargo install cargo-tarpaulin
 cargo tarpaulin --ignore-tests
+
+6.
+rustup component add clippy
+cargo clippy
+cargo clippy -- -D warnings
