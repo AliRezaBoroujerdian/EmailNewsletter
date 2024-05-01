@@ -1,10 +1,17 @@
 [package]
 name = "email_newsletter"
 version = "0.1.0"
+authors = ["AliReza Boroujerdian"]
 edition = "2021"
+
+[lib]
+path = "src/lib.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 actix-web = "4.5.1"
 tokio = { version = "1.37.0", features = ["macros", "rt-multi-thread"] }
+
+[dev-dependencies]
+reqwest = "0.12.4"
