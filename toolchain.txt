@@ -14,3 +14,7 @@ git push -u origin main
 cargo install cargo-watch
 cargo watch -x check
 cargo watch -x check -x test -x run
+
+5.
+cargo install cargo-tarpaulin
+cargo tarpaulin --ignore-tests
