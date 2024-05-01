@@ -47,3 +47,6 @@ Add GitHub action
 
 10.
 rustup toolchain install nightly --allow-downgrade
+
+11.
+cargo add --dev reqwest
