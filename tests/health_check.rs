@@ -1,0 +1,1 @@
+use email-newsletter::main;

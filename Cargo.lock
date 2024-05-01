@@ -406,7 +406,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "email-newsletter"
+name = "email_newsletter"
 version = "0.1.0"
 dependencies = [
  "actix-web",
