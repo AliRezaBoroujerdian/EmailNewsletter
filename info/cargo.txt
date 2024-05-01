@@ -1,0 +1,3 @@
+cargo add actix-web
+
+cargo add tokio --features macros,rt-multi-thread
