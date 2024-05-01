@@ -1,0 +1,15 @@
+1.
+cargo new email-newslatter
+
+2.
+git branch -m master main
+
+3.
+git add .
+git commit -am "Project skeleton"
+git remote add origin git@github.com:...
+git push -u origin main
+
+4.
+cargo install cargo-watch
+cargo watch -x check
