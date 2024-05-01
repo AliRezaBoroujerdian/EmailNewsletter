@@ -29,3 +29,8 @@ disable the noisy lint altogether for the whole project with a configuration lin
 #![allow(clippy::lint_name)] directive.
 Details on the available lints and how to tune them for your specific purposes can be found in clippy’s
 README.
+
+7.
+rustup component add rustfmt
+cargo fmt
+cargo fmt -- --check
