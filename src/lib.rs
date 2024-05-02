@@ -1,22 +1,26 @@
-use actix_web::{web, App, HttpRequest, HttpResponse, HttpServer, Responder};
+use actix_web::{dev::Server, web, App, HttpRequest, HttpResponse, HttpServer, Responder};
+use std::net::TcpListener;
 
-async fn greet(req: HttpRequest) -> impl Responder {
-    let name = req.match_info().get("name").unwrap_or("World");
-    format!("Hello {}!", &name)
+// We were returning `impl Responder` at the very beginning.
+// We are now spelling out the type explicitly given that we have
+// become more familiar with `actix-web`.
+// There is no performance difference! Just a stylistic choice :)
+async fn health_check() -> HttpResponse {
+    HttpResponse::Ok().finish()
 }
 
-async fn health_check(req: HttpRequest) -> impl Responder {
-    HttpResponse::Ok()
+// Let's start simple: we always return a 200 OK
+async fn subscribe() -> HttpResponse {
+    HttpResponse::Ok().finish()
 }
 
-pub async fn run() -> Result<(), std::io::Error> {
-    HttpServer::new(|| {
+pub fn run(listener: TcpListener) -> Result<Server, std::io::Error> {
+    let server = HttpServer::new(|| {
         App::new()
-            // .route("/", web::get().to(greet))
-            // .route("/{name}", web::get().to(greet))
             .route("/health_check", web::get().to(health_check))
+            .route("/subscriptions", web::post().to(subscribe))
     })
-    .bind("127.0.0.1:8000")?
-    .run()
-    .await
+    .listen(listener)?
+    .run();
+    Ok(server)
 }
