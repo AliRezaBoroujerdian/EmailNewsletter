@@ -3,3 +3,5 @@ cargo add actix-web
 cargo add tokio --features macros,rt-multi-thread
 
 cargo add serde --features derive
+
+cargo install sqlx-cli --no-default-features --features rustls,postgres
