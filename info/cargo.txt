@@ -7,3 +7,5 @@ cargo add serde --features derive
 cargo install sqlx-cli --no-default-features --features rustls,postgres
 
 cargo add config
+
+cargo add env_logger

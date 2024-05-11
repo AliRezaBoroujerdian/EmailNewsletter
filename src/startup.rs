@@ -1,5 +1,6 @@
 use crate::routes::{health_check, subscribe};
 use actix_web::dev::Server;
+use actix_web::middleware::Logger;
 use actix_web::web::Data;
 use actix_web::{web, App, HttpServer};
 use sqlx::PgPool;
