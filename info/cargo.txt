@@ -9,3 +9,7 @@ cargo install sqlx-cli --no-default-features --features rustls,postgres
 cargo add config
 
 cargo add env_logger
+
+cargo add log
+
+cargo add tracing --features log
