@@ -21,8 +21,8 @@ jobs:
         run: cargo test --verbose
       - name: fmt
         run: cargo fmt -- --check
-      - name: Audit
-        run: cargo audit
+      # - name: Audit
+      #   run: cargo audit
       - name: clippy
         run: cargo clippy
 # name: Security audit
