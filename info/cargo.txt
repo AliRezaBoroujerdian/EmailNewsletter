@@ -13,3 +13,5 @@ cargo add env_logger
 cargo add log
 
 cargo add tracing --features log
+
+cargo add tracing-subscriber --features registry,env-filter
